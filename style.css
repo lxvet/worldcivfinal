@@ -1,0 +1,93 @@
+:root{
+  --bg:#0b1020;
+  --card:#121a33;
+  --text:#eaf0ff;
+  --muted:#b9c3e6;
+  --accent:#7aa2ff;
+  --accent2:#7dffc3;
+  --border:rgba(234,240,255,.14);
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: radial-gradient(900px 500px at 20% 0%, rgba(122,162,255,.18), transparent 60%),
+              radial-gradient(900px 500px at 80% 10%, rgba(125,255,195,.12), transparent 55%),
+              var(--bg);
+  color:var(--text);
+  line-height:1.55;
+}
+
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.container{max-width:1000px;margin:0 auto;padding:24px}
+.nav{
+  position:sticky;top:0;z-index:10;
+  backdrop-filter: blur(10px);
+  background: rgba(11,16,32,.72);
+  border-bottom:1px solid var(--border);
+}
+.nav-inner{display:flex;gap:14px;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1000px;margin:0 auto}
+.brand{display:flex;flex-direction:column}
+.brand strong{font-size:14px;letter-spacing:.3px}
+.brand span{font-size:12px;color:var(--muted)}
+
+.nav-links{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end}
+.nav-links a{
+  padding:8px 10px;border:1px solid transparent;border-radius:999px;
+  color:var(--text);font-size:13px;opacity:.92
+}
+.nav-links a.active, .nav-links a:hover{
+  border-color:var(--border);
+  background: rgba(18,26,51,.65);
+  text-decoration:none;
+}
+
+.hero{
+  padding:26px 0 6px 0;
+}
+.hero h1{margin:0 0 10px 0;font-size:30px}
+.hero p{margin:0;color:var(--muted);max-width:80ch}
+
+.grid{
+  display:grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap:16px;
+  margin-top:18px;
+}
+@media (max-width: 880px){
+  .grid{grid-template-columns:1fr}
+}
+
+.card{
+  background: rgba(18,26,51,.72);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:18px;
+}
+.card h2{margin:0 0 10px 0;font-size:18px}
+.card h3{margin:14px 0 8px 0;font-size:15px;color:var(--accent2)}
+.card p, .card li{color:var(--text);opacity:.95}
+.card .muted{color:var(--muted)}
+.badge{
+  display:inline-block;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid var(--border);
+  background: rgba(11,16,32,.55);
+  font-size:12px;
+  color:var(--muted);
+}
+
+.footer{
+  margin-top:24px;
+  padding:18px 0;
+  border-top:1px solid var(--border);
+  color:var(--muted);
+  font-size:12px;
+}
+.kicker{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.16em}
+hr{border:none;border-top:1px solid var(--border);margin:14px 0}
+ul{margin:8px 0 0 18px}
